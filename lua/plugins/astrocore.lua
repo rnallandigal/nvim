@@ -3,6 +3,8 @@ return {
   "AstroNvim/astrocore",
 
   opts = function(_, opts)
+    opts.options.opt.wrap = true
+
     -- Custom keymaps --
     --------------------
     local map = { i = {}, n = {}, v = {}, t = {} }
@@ -22,9 +24,9 @@ return {
     -- Don't copy existing text when pasting
     map.v["p"] = { '"_dP', desc = "" }
 
-    -- scroll half page up / down
-    map.n["<M-u>"] = { "20k", desc = "move cursor up 20 lines" }
-    map.n["<M-d>"] = { "20j", desc = "mode cursor down 20 lines" }
+    -- scroll quarter page up / down
+    map.n["<M-u>"] = { "10k", desc = "move cursor up 10 lines" }
+    map.n["<M-d>"] = { "10j", desc = "mode cursor down 10 lines" }
 
     -- Plugins --
     -------------
