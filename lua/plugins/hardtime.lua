@@ -9,7 +9,7 @@ return {
       ["k"] = {},
       ["l"] = {},
       ["-"] = {},
-      ["+"] = {}
+      ["+"] = {},
     },
     -- TODO: disable hardtime in undotree
     disabled_filetypes = { "neo-tree", "undotree_2", "difftree_3" },
@@ -18,6 +18,6 @@ return {
       ["<Down>"] = { "" },
       ["<Left>"] = { "" },
       ["<Right>"] = { "" },
-    }
-  }
+    },
+  },
 }

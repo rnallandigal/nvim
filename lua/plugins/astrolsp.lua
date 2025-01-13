@@ -3,6 +3,6 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
-    lua_ls = {}
-  }
+    lua_ls = {},
+  },
 }

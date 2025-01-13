@@ -35,13 +35,20 @@ return {
 
     -- telescope
     map.n["<C-d>"] = {
-      function() require("telescope.builtin").buffers({ ignore_current_buffer = true, sort_mru = true }) end,
-      desc = "Find buffers"
+      function()
+        require("telescope.builtin").buffers({ ignore_current_buffer = true, sort_mru = true })
+      end,
+      desc = "Find buffers",
     }
-    map.n["<C-f>"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" }
+    map.n["<C-f>"] = {
+      function()
+        require("telescope.builtin").find_files()
+      end,
+      desc = "Find files",
+    }
 
     -- modifications to default keymaps
-    local utils = require('utils/utils')
+    local utils = require("utils/utils")
     local remap = { i = {}, n = {}, v = {}, t = {} }
     remap.n["<leader>fb"] = utils.NIL
     remap.n["<leader>ff"] = "<leader>fF"

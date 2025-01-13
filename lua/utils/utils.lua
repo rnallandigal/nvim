@@ -8,11 +8,11 @@ utils.NIL = {}
 -- 2. string value indicates to replace the corresponding key with the value of the given key
 local function recursive_remap(tbl, remap)
   for key, value in pairs(remap) do
-    if (value == utils.NIL) then
+    if value == utils.NIL then
       tbl[key] = nil
-    elseif (type(value) == "string") then
+    elseif type(value) == "string" then
       tbl[key] = tbl[value]
-    elseif (type(value) == 'table' and type(tbl[key]) == 'table') then
+    elseif type(value) == "table" and type(tbl[key]) == "table" then
       tbl[key] = recursive_remap(tbl[key], value)
     end
   end
