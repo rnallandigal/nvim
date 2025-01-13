@@ -3,7 +3,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      max_concurrent_installers = 8
+      max_concurrent_installers = 8,
     },
   },
   {
@@ -12,8 +12,15 @@ return {
       ensure_installed = {
         "lua_ls",
         "pyright",
-        "clangd"
+        "clangd",
+        "bashls",
       },
     },
-  }
+  },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    opts = {
+      ensure_installed = { "stylua", "shfmt" },
+    },
+  },
 }
