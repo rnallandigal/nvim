@@ -3,6 +3,15 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
-    lua_ls = {},
+    ---@diagnostic disable: missing-fields
+    config = {
+      lua_ls = {
+        settings = {
+          Lua = {
+            format = { enable = false },
+          },
+        },
+      },
+    },
   },
 }
