@@ -14,6 +14,7 @@ return {
         "pyright",
         "clangd",
         "bashls",
+        "ts_ls",
       },
     },
   },
