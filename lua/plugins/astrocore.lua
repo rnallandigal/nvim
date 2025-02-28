@@ -3,7 +3,13 @@ return {
   "AstroNvim/astrocore",
 
   opts = function(_, opts)
-    opts.options.opt.wrap = true
+    -- Custom Options --
+    --------------------
+    opts.options.opt = vim.tbl_deep_extend("force", opts.options.opt, {
+      wrap = true, -- display lines as one long line
+      scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
+      clipboard = "unnamedplus", -- Connection to the system clipboard
+    })
 
     -- Custom keymaps --
     --------------------
