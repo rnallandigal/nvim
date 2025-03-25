@@ -26,7 +26,7 @@ return {
         end,
         desc = "Find in the current buffer",
       }
-      maps.n["<C-g>"] = {
+      maps.n["<leader>fs"] = {
         function()
           require("telescope.builtin").treesitter()
         end,
