@@ -20,12 +20,6 @@ return {
         end,
         desc = "Find files",
       }
-      maps.n["/"] = {
-        function()
-          require("telescope.builtin").current_buffer_fuzzy_find()
-        end,
-        desc = "Find in the current buffer",
-      }
       maps.n["<leader>fs"] = {
         function()
           require("telescope.builtin").treesitter()
