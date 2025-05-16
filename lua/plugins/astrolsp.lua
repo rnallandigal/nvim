@@ -12,6 +12,27 @@ return {
           },
         },
       },
+      pyright = {
+        settings = {
+          pyright = {
+            -- use ruff's import organizer
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              -- exclusively use ruff for linting
+              ignore = { "*" },
+            },
+          },
+        },
+      },
+      ruff = {
+        init_options = {
+          settings = {
+            logLevel = "info",
+          },
+        },
+      },
     },
   },
 }
