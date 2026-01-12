@@ -16,7 +16,9 @@ return {
       }
       maps.n["<C-f>"] = {
         function()
-          require("telescope.builtin").find_files()
+          require("telescope.builtin").find_files({
+            find_command = { "rg", "--files", "--sortr", "modified" },
+          })
         end,
         desc = "Find files",
       }
@@ -34,7 +36,9 @@ return {
       }
       maps.n["<leader>ff"] = {
         function()
-          require("telescope.builtin").find_files({ hidden = true, no_ignore = true })
+          require("telescope.builtin").find_files({
+            find_command = { "rg", "--files", "--hidden", "--no-ignore", "--sortr", "modified" },
+          })
         end,
         desc = "Find all files",
       }
